@@ -16,13 +16,6 @@ public class PhoneBookRepositoryImpl implements PhoneBookRepository {
 
     public PhoneBookRepositoryImpl(List<Contact> contacts) {
         this.contacts = contacts;
-        this.contacts.addAll(List.of(
-                new Contact(1, "name1", "surname1", "phone1"),
-                new Contact(2, "name2", "surname2", "phone2"),
-                new Contact(3, "name3", "surname3", "phone3"),
-                new Contact(4, "name4", "surname4", "phone4"),
-                new Contact(5, "name5", "surname5", "phone5")
-        ));
         newContactId = new AtomicInteger(1);
     }
 
