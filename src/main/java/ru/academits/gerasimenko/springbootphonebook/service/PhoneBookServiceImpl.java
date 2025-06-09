@@ -1,12 +1,12 @@
-package ru.academits.gerasimenko.springbootphonebookmarch2025.service;
+package ru.academits.gerasimenko.springbootphonebook.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.data.Contact;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.data.ContactProcessor;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.repository.PhoneBookRepository;
+import ru.academits.gerasimenko.springbootphonebook.data.Contact;
+import ru.academits.gerasimenko.springbootphonebook.data.ContactProcessor;
+import ru.academits.gerasimenko.springbootphonebook.repository.PhoneBookRepository;
 
 import java.util.List;
 import java.util.Random;

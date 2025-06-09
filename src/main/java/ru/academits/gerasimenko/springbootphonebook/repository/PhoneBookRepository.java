@@ -1,10 +1,10 @@
-package ru.academits.gerasimenko.springbootphonebookmarch2025.service;
+package ru.academits.gerasimenko.springbootphonebook.repository;
 
-import ru.academits.gerasimenko.springbootphonebookmarch2025.data.Contact;
+import ru.academits.gerasimenko.springbootphonebook.data.Contact;
 
 import java.util.List;
 
-public interface PhoneBookService {
+public interface PhoneBookRepository {
     List<Contact> getContacts(String term);
 
     void addContact(Contact contact);

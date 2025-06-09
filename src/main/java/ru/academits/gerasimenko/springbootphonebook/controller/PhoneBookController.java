@@ -1,9 +1,9 @@
-package ru.academits.gerasimenko.springbootphonebookmarch2025.controller;
+package ru.academits.gerasimenko.springbootphonebook.controller;
 
 import org.springframework.web.bind.annotation.*;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.data.Contact;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.data.Response;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.service.PhoneBookService;
+import ru.academits.gerasimenko.springbootphonebook.data.Contact;
+import ru.academits.gerasimenko.springbootphonebook.data.Response;
+import ru.academits.gerasimenko.springbootphonebook.service.PhoneBookService;
 
 import java.util.List;
 

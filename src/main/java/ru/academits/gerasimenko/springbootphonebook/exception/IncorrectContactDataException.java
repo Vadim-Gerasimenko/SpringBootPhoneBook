@@ -1,4 +1,4 @@
-package ru.academits.gerasimenko.springbootphonebookmarch2025.exception;
+package ru.academits.gerasimenko.springbootphonebook.exception;
 
 public class IncorrectContactDataException extends ContactProcessingException {
     public IncorrectContactDataException(String message) {

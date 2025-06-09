@@ -1,4 +1,4 @@
-package ru.academits.gerasimenko.springbootphonebookmarch2025.handler;
+package ru.academits.gerasimenko.springbootphonebook.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.data.Response;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.exception.ContactProcessingException;
+import ru.academits.gerasimenko.springbootphonebook.data.Response;
+import ru.academits.gerasimenko.springbootphonebook.exception.ContactProcessingException;
 
 @ControllerAdvice
 @Slf4j

@@ -1,10 +1,10 @@
-package ru.academits.gerasimenko.springbootphonebookmarch2025.data;
+package ru.academits.gerasimenko.springbootphonebook.data;
 
-import ru.academits.gerasimenko.springbootphonebookmarch2025.exception.ContactNotFoundException;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.exception.ContactProcessingException;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.exception.ExistingContactNumberException;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.exception.IncorrectContactDataException;
-import ru.academits.gerasimenko.springbootphonebookmarch2025.repository.PhoneBookRepository;
+import ru.academits.gerasimenko.springbootphonebook.exception.ContactNotFoundException;
+import ru.academits.gerasimenko.springbootphonebook.exception.ContactProcessingException;
+import ru.academits.gerasimenko.springbootphonebook.exception.ExistingContactNumberException;
+import ru.academits.gerasimenko.springbootphonebook.exception.IncorrectContactDataException;
+import ru.academits.gerasimenko.springbootphonebook.repository.PhoneBookRepository;
 
 public class ContactProcessor {
     private ContactProcessor() {
