@@ -13,9 +13,9 @@ public class ContactProcessor {
     public static Contact processContact(Contact contact) {
         return new Contact(
                 contact.getId(),
-                TextUtilities.getProcessedText(contact.getName()),
-                TextUtilities.getProcessedText(contact.getSurname()),
-                TextUtilities.getProcessedText(contact.getPhone())
+                TextUtilities.getEscapedHtmlText(contact.getName()),
+                TextUtilities.getEscapedHtmlText(contact.getSurname()),
+                TextUtilities.getEscapedHtmlText(contact.getPhone())
         );
     }
 

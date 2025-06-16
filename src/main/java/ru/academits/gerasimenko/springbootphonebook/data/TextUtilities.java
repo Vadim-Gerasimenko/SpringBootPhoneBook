@@ -10,7 +10,7 @@ public class TextUtilities {
         return text == null || text.trim().isEmpty();
     }
 
-    public static String getProcessedText(String text) {
+    public static String getEscapedHtmlText(String text) {
         return text == null ? "" : StringEscapeUtils.escapeHtml4(text).trim();
     }
 }
