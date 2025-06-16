@@ -34,7 +34,7 @@ public class PhoneBookServiceImpl implements PhoneBookService {
         log.info("Trying to add new contact");
 
         if (ContactProcessor.isCorrectContact(newContact)
-                & ContactProcessor.isNotExistingContact(phoneBookRepository, newContact)
+                && ContactProcessor.isNotExistingContact(phoneBookRepository, newContact)
         ) {
             phoneBookRepository.addContact(newContact);
             log.info("New contact added successfully");
@@ -49,8 +49,8 @@ public class PhoneBookServiceImpl implements PhoneBookService {
         log.info("Trying to update contact with id = {}", newContact.getId());
 
         if (ContactProcessor.isCorrectContact(newContact)
-                & ContactProcessor.isExistingContactById(phoneBookRepository, newContact.getId())
-                & ContactProcessor.isNotExistingContactOrSame(phoneBookRepository, newContact)
+                && ContactProcessor.isExistingContactById(phoneBookRepository, newContact.getId())
+                && ContactProcessor.isNotExistingContactOrSame(phoneBookRepository, newContact)
         ) {
             phoneBookRepository.updateContact(contact);
 
@@ -73,7 +73,7 @@ public class PhoneBookServiceImpl implements PhoneBookService {
         }
     }
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 100000)
     public void deleteRandomContact() {
         log.info("Launched scheduled task that deletes random contacts every 10 seconds");
 
