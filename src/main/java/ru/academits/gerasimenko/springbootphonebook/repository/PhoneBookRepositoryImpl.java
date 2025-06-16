@@ -60,7 +60,7 @@ public class PhoneBookRepositoryImpl implements PhoneBookRepository {
                     .orElse(null);
 
             if (updatedContact == null) {
-                throw new ContactNotFoundException("Contact with id =" + updatedContactId + " not found");
+                throw new ContactNotFoundException("Contact with id = " + updatedContactId + " not found");
             }
 
             updatedContact.setName(contact.getName());
@@ -73,7 +73,7 @@ public class PhoneBookRepositoryImpl implements PhoneBookRepository {
     public void deleteContact(int id) {
         synchronized (contacts) {
             if (contacts.stream().noneMatch(c -> c.getId() == id)) {
-                throw new ContactNotFoundException("Contact with id =" + id + " not found");
+                throw new ContactNotFoundException("Contact with id = " + id + " not found");
             }
 
             contacts.removeIf(c -> c.getId() == id);
