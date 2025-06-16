@@ -39,7 +39,7 @@ public class PhoneBookServiceImpl implements PhoneBookService {
             phoneBookRepository.addContact(newContact);
             log.info("New contact added successfully");
         } else {
-            log.warn("Failed to create contact");
+            log.error("Failed to create contact");
         }
     }
 
@@ -56,7 +56,7 @@ public class PhoneBookServiceImpl implements PhoneBookService {
 
             log.info("Contact with id = {} updated successfully", newContact.getId());
         } else {
-            log.warn("Failed to update contact with id = {}", newContact.getId());
+            log.error("Failed to update contact with id = {}", newContact.getId());
         }
     }
 
@@ -81,7 +81,7 @@ public class PhoneBookServiceImpl implements PhoneBookService {
         int contactsAmount = contacts.size();
 
         if (contactsAmount == 0) {
-            log.warn("Scheduled task not completed: contacts missing");
+            log.error("Scheduled task not completed: contacts missing");
             return;
         }
 

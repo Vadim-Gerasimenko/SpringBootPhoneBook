@@ -16,7 +16,7 @@ public class ContactProcessingExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
     public Response catchContactProcessingException(ContactProcessingException e) {
-        log.warn("Exception caught: {}", e.getMessage());
+        log.error("Exception caught: {}", e.getMessage());
         return new Response(false, e.getMessage());
     }
 }
