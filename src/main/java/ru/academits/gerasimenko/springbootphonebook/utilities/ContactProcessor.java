@@ -20,7 +20,7 @@ public class ContactProcessor {
         );
     }
 
-    public static boolean isCorrectContact(Contact contact) {
+    public static void checkContactForCorrectness(Contact contact) {
         if (contact == null) {
             throw new ContactProcessingException("Contact is null");
         }
@@ -36,36 +36,28 @@ public class ContactProcessor {
         if (TextUtilities.isNullOrEmpty(contact.getPhone())) {
             throw new IncorrectContactDataException("Contact phone is incorrect");
         }
-
-        return true;
     }
 
-    public static boolean isNotExistingContact(PhoneBookRepository phoneBook, Contact contact) {
+    public static void checkContactForNotExisting(PhoneBookRepository phoneBook, Contact contact) {
         if (phoneBook.getContacts("").stream()
                 .anyMatch(c -> c.getPhone().equals(contact.getPhone()))
         ) {
             throw new ExistingContactNumberException("Phone number '" + contact.getPhone() + "' already exists");
         }
-
-        return true;
     }
 
-    public static boolean isNotExistingContactOrSame(PhoneBookRepository phoneBook, Contact contact) {
+    public static void checkContactForNotExistingOrSame(PhoneBookRepository phoneBook, Contact contact) {
         if (phoneBook.getContacts("").stream()
                 .anyMatch(c -> c.getId() != contact.getId() && c.getPhone().equals(contact.getPhone()))
         ) {
             throw new ExistingContactNumberException("Phone number '" + contact.getPhone() + "' already exists");
         }
-
-        return true;
     }
 
-    public static boolean isExistingContactById(PhoneBookRepository phoneBook, int id) {
+    public static void checkForExistingContactById(PhoneBookRepository phoneBook, int id) {
         if (phoneBook.getContacts("").stream().noneMatch(c -> c.getId() == id)
         ) {
             throw new ContactNotFoundException("Contact with id = " + id + " not found");
         }
-
-        return true;
     }
 }

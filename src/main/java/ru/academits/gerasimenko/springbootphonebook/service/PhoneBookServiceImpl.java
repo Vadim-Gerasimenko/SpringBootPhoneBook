@@ -33,14 +33,11 @@ public class PhoneBookServiceImpl implements PhoneBookService {
         Contact newContact = ContactProcessor.processContact(contact);
         log.info("Trying to add new contact");
 
-        if (ContactProcessor.isCorrectContact(newContact)
-                && ContactProcessor.isNotExistingContact(phoneBookRepository, newContact)
-        ) {
-            phoneBookRepository.addContact(newContact);
-            log.info("New contact added successfully");
-        } else {
-            log.error("Failed to create contact");
-        }
+        ContactProcessor.checkContactForCorrectness(newContact);
+        ContactProcessor.checkContactForNotExisting(phoneBookRepository, newContact);
+
+        phoneBookRepository.addContact(newContact);
+        log.info("New contact added successfully");
     }
 
     @Override
@@ -48,29 +45,22 @@ public class PhoneBookServiceImpl implements PhoneBookService {
         Contact newContact = ContactProcessor.processContact(contact);
         log.info("Trying to update contact with id = {}", newContact.getId());
 
-        if (ContactProcessor.isCorrectContact(newContact)
-                && ContactProcessor.isExistingContactById(phoneBookRepository, newContact.getId())
-                && ContactProcessor.isNotExistingContactOrSame(phoneBookRepository, newContact)
-        ) {
-            phoneBookRepository.updateContact(contact);
+        ContactProcessor.checkContactForCorrectness(newContact);
+        ContactProcessor.checkForExistingContactById(phoneBookRepository, newContact.getId());
+        ContactProcessor.checkContactForNotExistingOrSame(phoneBookRepository, newContact);
 
-            log.info("Contact with id = {} updated successfully", newContact.getId());
-        } else {
-            log.error("Failed to update contact with id = {}", newContact.getId());
-        }
+        phoneBookRepository.updateContact(contact);
+        log.info("Contact with id = {} updated successfully", newContact.getId());
     }
 
     @Override
     public void deleteContact(int id) {
         log.info("Trying to delete contact with id = {}", id);
 
-        if (ContactProcessor.isExistingContactById(phoneBookRepository, id)) {
-            phoneBookRepository.deleteContact(id);
+        ContactProcessor.checkForExistingContactById(phoneBookRepository, id);
 
-            log.info("Contact with id = {} deleted successfully", id);
-        } else {
-            log.warn("Failed to delete contact with id = {}", id);
-        }
+        phoneBookRepository.deleteContact(id);
+        log.info("Contact with id = {} deleted successfully", id);
     }
 
     @Scheduled(fixedRate = 10000)
