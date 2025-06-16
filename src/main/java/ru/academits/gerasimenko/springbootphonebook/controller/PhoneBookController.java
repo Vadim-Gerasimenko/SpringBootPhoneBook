@@ -1,8 +1,8 @@
 package ru.academits.gerasimenko.springbootphonebook.controller;
 
 import org.springframework.web.bind.annotation.*;
-import ru.academits.gerasimenko.springbootphonebook.data.Contact;
-import ru.academits.gerasimenko.springbootphonebook.data.Response;
+import ru.academits.gerasimenko.springbootphonebook.data.dto.Contact;
+import ru.academits.gerasimenko.springbootphonebook.data.entity.Response;
 import ru.academits.gerasimenko.springbootphonebook.service.PhoneBookService;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package ru.academits.gerasimenko.springbootphonebook.data;
+package ru.academits.gerasimenko.springbootphonebook.utilities;
 
 import org.apache.commons.text.StringEscapeUtils;
 

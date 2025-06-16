@@ -4,8 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import ru.academits.gerasimenko.springbootphonebook.data.Contact;
-import ru.academits.gerasimenko.springbootphonebook.data.ContactProcessor;
+import ru.academits.gerasimenko.springbootphonebook.data.dto.Contact;
+import ru.academits.gerasimenko.springbootphonebook.utilities.ContactProcessor;
 import ru.academits.gerasimenko.springbootphonebook.repository.PhoneBookRepository;
 
 import java.util.List;
@@ -73,7 +73,7 @@ public class PhoneBookServiceImpl implements PhoneBookService {
         }
     }
 
-    @Scheduled(fixedRate = 100000)
+    @Scheduled(fixedRate = 10000)
     public void deleteRandomContact() {
         log.info("Launched scheduled task that deletes random contacts every 10 seconds");
 

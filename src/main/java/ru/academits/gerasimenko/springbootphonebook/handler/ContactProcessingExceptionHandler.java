@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import ru.academits.gerasimenko.springbootphonebook.data.Response;
+import ru.academits.gerasimenko.springbootphonebook.data.entity.Response;
 import ru.academits.gerasimenko.springbootphonebook.exception.ContactProcessingException;
 
 @ControllerAdvice

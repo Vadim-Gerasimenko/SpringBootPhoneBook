@@ -1,4 +1,4 @@
-package ru.academits.gerasimenko.springbootphonebook.data;
+package ru.academits.gerasimenko.springbootphonebook.data.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
