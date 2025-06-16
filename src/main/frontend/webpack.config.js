@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: "./js/script.js",
     output: {
-        path: path.resolve(__dirname, "..", "public"),
+        path: path.resolve(__dirname, "..", "resources/static"),
         filename: "script.js",
         assetModuleFilename: "[path][name][ext]?[contenthash]"
     },
@@ -70,7 +70,7 @@ module.exports = {
             filename: "style.css"
         }),
         new HtmlWebpackPlugin({
-            template: "../../../src/main/resources/static/index.html"
+            template: "index.html"
         }),
         new webpack.DefinePlugin({
             __VUE_OPTIONS_API__: "true",
