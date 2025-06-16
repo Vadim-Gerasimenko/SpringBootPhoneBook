@@ -2,8 +2,8 @@ package ru.academits.gerasimenko.springbootphonebook.data;
 
 import org.apache.commons.text.StringEscapeUtils;
 
-public class TextProcessor {
-    private TextProcessor() {
+public class TextUtilities {
+    private TextUtilities() {
     }
 
     public static boolean isIncorrectField(String text) {

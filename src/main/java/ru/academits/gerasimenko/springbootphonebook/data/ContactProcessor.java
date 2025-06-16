@@ -13,9 +13,9 @@ public class ContactProcessor {
     public static Contact processContact(Contact contact) {
         return new Contact(
                 contact.getId(),
-                TextProcessor.getProcessedText(contact.getName()),
-                TextProcessor.getProcessedText(contact.getSurname()),
-                TextProcessor.getProcessedText(contact.getPhone())
+                TextUtilities.getProcessedText(contact.getName()),
+                TextUtilities.getProcessedText(contact.getSurname()),
+                TextUtilities.getProcessedText(contact.getPhone())
         );
     }
 
@@ -24,15 +24,15 @@ public class ContactProcessor {
             throw new ContactProcessingException("Contact is null");
         }
 
-        if (TextProcessor.isIncorrectField(contact.getName())) {
+        if (TextUtilities.isIncorrectField(contact.getName())) {
             throw new IncorrectContactDataException("Contact name is incorrect");
         }
 
-        if (TextProcessor.isIncorrectField(contact.getSurname())) {
+        if (TextUtilities.isIncorrectField(contact.getSurname())) {
             throw new IncorrectContactDataException("Contact surname is incorrect");
         }
 
-        if (TextProcessor.isIncorrectField(contact.getPhone())) {
+        if (TextUtilities.isIncorrectField(contact.getPhone())) {
             throw new IncorrectContactDataException("Contact phone is incorrect");
         }
 
