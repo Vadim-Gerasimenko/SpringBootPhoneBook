@@ -6,7 +6,7 @@ public class TextUtilities {
     private TextUtilities() {
     }
 
-    public static boolean isIncorrectField(String text) {
+    public static boolean isNullOrEmpty(String text) {
         return text == null || text.trim().isEmpty();
     }
 

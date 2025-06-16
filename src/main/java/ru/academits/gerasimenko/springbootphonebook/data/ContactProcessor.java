@@ -24,15 +24,15 @@ public class ContactProcessor {
             throw new ContactProcessingException("Contact is null");
         }
 
-        if (TextUtilities.isIncorrectField(contact.getName())) {
+        if (TextUtilities.isNullOrEmpty(contact.getName())) {
             throw new IncorrectContactDataException("Contact name is incorrect");
         }
 
-        if (TextUtilities.isIncorrectField(contact.getSurname())) {
+        if (TextUtilities.isNullOrEmpty(contact.getSurname())) {
             throw new IncorrectContactDataException("Contact surname is incorrect");
         }
 
-        if (TextUtilities.isIncorrectField(contact.getPhone())) {
+        if (TextUtilities.isNullOrEmpty(contact.getPhone())) {
             throw new IncorrectContactDataException("Contact phone is incorrect");
         }
 
