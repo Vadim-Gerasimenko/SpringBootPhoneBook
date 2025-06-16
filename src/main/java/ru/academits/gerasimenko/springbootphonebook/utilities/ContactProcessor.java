@@ -1,6 +1,6 @@
 package ru.academits.gerasimenko.springbootphonebook.utilities;
 
-import ru.academits.gerasimenko.springbootphonebook.data.dto.Contact;
+import ru.academits.gerasimenko.springbootphonebook.dto.Contact;
 import ru.academits.gerasimenko.springbootphonebook.exception.ContactNotFoundException;
 import ru.academits.gerasimenko.springbootphonebook.exception.ContactProcessingException;
 import ru.academits.gerasimenko.springbootphonebook.exception.ExistingContactNumberException;

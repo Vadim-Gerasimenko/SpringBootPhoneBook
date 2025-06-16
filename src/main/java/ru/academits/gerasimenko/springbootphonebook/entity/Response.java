@@ -1,4 +1,4 @@
-package ru.academits.gerasimenko.springbootphonebook.data.entity;
+package ru.academits.gerasimenko.springbootphonebook.entity;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;

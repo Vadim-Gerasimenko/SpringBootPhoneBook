@@ -1,6 +1,6 @@
 package ru.academits.gerasimenko.springbootphonebook.repository;
 
-import ru.academits.gerasimenko.springbootphonebook.data.dto.Contact;
+import ru.academits.gerasimenko.springbootphonebook.dto.Contact;
 
 import java.util.List;
 

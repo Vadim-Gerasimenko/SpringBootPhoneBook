@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import ru.academits.gerasimenko.springbootphonebook.data.dto.Contact;
+import ru.academits.gerasimenko.springbootphonebook.dto.Contact;
 import ru.academits.gerasimenko.springbootphonebook.utilities.ContactProcessor;
 import ru.academits.gerasimenko.springbootphonebook.repository.PhoneBookRepository;
 

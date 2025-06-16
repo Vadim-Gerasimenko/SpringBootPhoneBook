@@ -1,7 +1,7 @@
 package ru.academits.gerasimenko.springbootphonebook.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.academits.gerasimenko.springbootphonebook.data.dto.Contact;
+import ru.academits.gerasimenko.springbootphonebook.dto.Contact;
 import ru.academits.gerasimenko.springbootphonebook.exception.ContactNotFoundException;
 
 import java.util.List;
