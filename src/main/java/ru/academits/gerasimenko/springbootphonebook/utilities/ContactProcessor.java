@@ -54,7 +54,7 @@ public class ContactProcessor {
         }
     }
 
-    public static void checkForExistingContactById(PhoneBookRepository phoneBook, int id) {
+    public static void checkContactForExistingById(PhoneBookRepository phoneBook, int id) {
         if (phoneBook.getContacts("").stream().noneMatch(c -> c.getId() == id)
         ) {
             throw new ContactNotFoundException("Contact with id = " + id + " not found");

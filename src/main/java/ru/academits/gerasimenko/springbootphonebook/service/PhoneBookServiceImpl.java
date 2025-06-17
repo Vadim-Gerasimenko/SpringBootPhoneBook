@@ -46,7 +46,7 @@ public class PhoneBookServiceImpl implements PhoneBookService {
         log.info("Trying to update contact with id = {}", newContact.getId());
 
         ContactProcessor.checkContactForCorrectness(newContact);
-        ContactProcessor.checkForExistingContactById(phoneBookRepository, newContact.getId());
+        ContactProcessor.checkContactForExistingById(phoneBookRepository, newContact.getId());
         ContactProcessor.checkContactForNotExistingOrSame(phoneBookRepository, newContact);
 
         phoneBookRepository.updateContact(contact);
@@ -57,7 +57,7 @@ public class PhoneBookServiceImpl implements PhoneBookService {
     public void deleteContact(int id) {
         log.info("Trying to delete contact with id = {}", id);
 
-        ContactProcessor.checkForExistingContactById(phoneBookRepository, id);
+        ContactProcessor.checkContactForExistingById(phoneBookRepository, id);
 
         phoneBookRepository.deleteContact(id);
         log.info("Contact with id = {} deleted successfully", id);
